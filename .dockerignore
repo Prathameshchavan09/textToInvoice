@@ -1,0 +1,6 @@
+target/*.jar.original
+node_modules
+.git
+.gitignore
+Dockerfile
+README.md

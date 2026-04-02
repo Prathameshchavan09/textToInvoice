@@ -4,6 +4,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,7 +28,13 @@ public class InvoiceController {
 		this.aiService = aiService;
 		this.pdfGen = pdfGen;
 	}
-
+	
+	@GetMapping("/checkApi")
+	public String demo(){
+		return "Working....";
+	}
+	
+	
 	@PostMapping("/generate")
 	public ResponseEntity<byte[]> generateInvoice(@RequestBody VoiceRequest request) {
 
